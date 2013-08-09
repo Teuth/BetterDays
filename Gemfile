@@ -30,10 +30,16 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails', '~> 2.13.1'
   gem 'sqlite3'
   # Use sqlite3 as the database for Active Record
   # In development and test to allow Heroku
+end
+
+group :test do 
+	gem 'webrat' 
+	# webrat est neccessaire pour les problèmes de connections au page
+	# html de rspec method have_selector
 end
 
 group :production do
